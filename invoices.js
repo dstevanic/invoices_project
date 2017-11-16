@@ -5,6 +5,7 @@ let invTable,
 $(document).ready(function () {
     invTable = $("#invoices-table");
     renderTable();
+    console.log('test');
 })
 
 
