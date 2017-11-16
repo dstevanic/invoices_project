@@ -1,0 +1,70 @@
+body {
+    background-color: #d3d4dd;
+    margin: 15px;
+    color:#e0dde0;
+    /* font-family:"Whitney SSm A", "Whitney SSm B", "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif; */
+    font-family: Montserrat, sans-serif; 
+  }
+ 
+ 
+ .container {
+    
+align-content: center;      
+     background-color: #5261e6;
+     margin: 50px auto;
+     width: 430px;
+     height: auto;
+ } 
+
+
+section form{
+    padding:40px;
+}
+.loginForm .label{
+    color:#c3c3c3;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 15px; 
+}
+
+.loginForm #invoiceName, #val, #date {
+    border-radius: 15px;
+    height: 30px;
+    width:330px;
+    border: none;
+    background-color:white;
+    outline: none;
+    color:#474874;
+    font-size: 12px;
+    margin: 10px 0px;
+    padding: 0px 10px; 
+}
+
+.loginForm button, {
+    border-radius: 15px;
+    height: 30px;
+    width:350px;
+    border: none;
+    background-color: #adb5c4;
+    outline: none;
+    color:#5261e6;
+    margin: 10px 0px;
+   
+
+}
+.btnNewInput{
+    border-radius: 15px;
+    height: 30px;
+    width:150px;
+    border: none;
+    background-color: #adb5c4;
+    outline: none;
+    color:#5261e6;
+    margin: 10px 0px;
+}
+
+
+
+hr{
+    background-color: #c3c3c3;
+}

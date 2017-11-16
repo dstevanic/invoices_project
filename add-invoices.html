@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="invoices-form.css" rel="stylesheet" />
+    <title>Invoices </title>
+</head>
+
+<body>
+    <div class="container">
+
+
+        <button type="button" class="btnNewInput" onclick="linkToForm()">Add new field</button>
+
+
+        <section class="loginForm">
+
+            <form id="form-login">
+                <h3>Add new invoice</h3>
+                <label for="invoice-name" class="label">Invoice name</label>
+                <br/>
+                <input type="text" name="invoice-name" id="invoiceName" />
+                <br/>
+                <label for="editor" class="label">Value</label>
+                <br/>
+                <input type="text" name="value" id="val" />
+                <br/>
+                <label for="date" class="label">Date</label>
+                <br/>
+                <input type="date" name="date" id="date" />
+                <br/>
+
+            
+                <button type="button" onclick="postInvoice()">Save</button>
+                
+            </form>
+        </section>
+
+
+    </div>
+
+    <script type="text/javascript" src="invoices.js"></script>
+</body>
+
+</html>
