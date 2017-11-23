@@ -1,7 +1,6 @@
 let invTable,
     baseUrl = "https://c7xj8b7r70.execute-api.us-east-1.amazonaws.com/latest/invoices/";
-
-$(document).ready(function () {
+    $(document).ready(function () {
     invTable = $("#invoices-table");
     getInvoices(renderTable);
     console.log('test');
@@ -29,21 +28,15 @@ function renderTable(invoices) {
 
 }
 function cleanTable() {
-    let rows = $("tr", invTable),
-        rowIndex = 0;
-
-    for (rowIndex; rowIndex < rows.length; rowIndex++) {
-        if (rowIndex == 0) continue;
-        invTable[0].deleteRow(rowIndex);
-
-    };
+    let Table = document.getElementsByTagName("tbody")[0];
+    Table.innerHTML = "";
 
 }
 
 function getInvoices(callback) {
     //TODO: funkcija za preuzimanje svih zapisa sa servera
     ajaxRequest('GET', baseUrl, null, function (invoicesResponse) {
-         console.log('invoicesResponse',    invoicesResponse);
+        console.log('invoicesResponse', invoicesResponse);
         callback(invoicesResponse);
         ///return invoicesResponse;
 
@@ -55,7 +48,8 @@ function getInvoices(callback) {
 function deleteInvoice(invoiceForDelete) {
     //TODO: funkcija brisanje podataka sa servera(za izabrani zapis)
     ajaxRequest('DELETE', baseUrl + invoiceForDelete, undefined, function () {
-        getInvoices(renderTable);
+        
+        window.location.href = "invoices.html";
 
     });
 
@@ -67,7 +61,7 @@ function addInvoiceToTable(invoice) {
     //TODO: funkcija koja dodaje novi red u HTML tabelu
 
     let foundTables = document.getElementsByTagName('table');
-    if (foundTables.length < 1) return;//throw 'No table found';
+    if (foundTables.length < 1) return;
 
     let table = foundTables[0]
 

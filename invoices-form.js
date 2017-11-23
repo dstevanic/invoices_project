@@ -48,7 +48,8 @@ $(document).ready(function () {
     // invName = $("name", form).val();
     //  invVal = $("val", form).val();
     //  invDate = $("date", form).val();
-   
+
+
 })
 
 function postInvoice() {
@@ -59,7 +60,7 @@ function postInvoice() {
         invDate = document.getElementById('date');
     let newInvoice = JSON.stringify({ invoicesid: "", name: invName.value, val: invVal.value, date: invDate.value });
 
-    
+
     ajaxRequest('POST', baseUrl, newInvoice, function (invoiceResponse) {
         window.location.href = "invoices.html";
 
@@ -75,10 +76,10 @@ function postInvoice() {
 
     // for(let i = 0; i< koklikopostojiinputa; i++){
     //     objekatZaServerPost[listainputaforme[i].name] = listainputaforme[i].value;
-    
+
     // }
 
-    
+
     // ajaxRequest('POST', baseUrl, JSON.stringify(objekatZaServerPost), function (invoiceResponse) {
     //     window.location.href = "invoices.html";
 
@@ -121,6 +122,7 @@ function putInvoice() {
     console.log("editedInvoice ===>", editedInvoice);
 
     ajaxRequest('PUT', baseUrl + invId.value, editedInvoice, function () {
+
         window.location.href = "invoices.html";
     });
 }
@@ -132,12 +134,12 @@ function addNewField() {
     let inputNamePrefix = "PericaMali";
     let newFieldName = inputNamePrefix + koklikopostojiinputa;
 
-    let objekatZaServerPost={};
+    let objekatZaServerPost = {};
 
-    for(let i = 0; i< koklikopostojiinputa; i++){
+    for (let i = 0; i < koklikopostojiinputa; i++) {
         objekatZaServerPost[listainputaforme[i].name] = listainputaforme[i].value;
 
-        
+
     }
     console.log('objekatZaServerPost', objekatZaServerPost);
 
