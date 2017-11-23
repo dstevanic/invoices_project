@@ -59,12 +59,34 @@ function postInvoice() {
         invDate = document.getElementById('date');
     let newInvoice = JSON.stringify({ invoicesid: "", name: invName.value, val: invVal.value, date: invDate.value });
 
+    
     ajaxRequest('POST', baseUrl, newInvoice, function (invoiceResponse) {
         window.location.href = "invoices.html";
 
         //console.log('newInvoice', newInvoice);
 
     });
+
+
+    // let listainputaforme = $("input", form);
+    // let koklikopostojiinputa = listainputaforme.length;
+
+    // let objekatZaServerPost={};
+
+    // for(let i = 0; i< koklikopostojiinputa; i++){
+    //     objekatZaServerPost[listainputaforme[i].name] = listainputaforme[i].value;
+    
+    // }
+
+    
+    // ajaxRequest('POST', baseUrl, JSON.stringify(objekatZaServerPost), function (invoiceResponse) {
+    //     window.location.href = "invoices.html";
+
+    //     console.log('objekatZaServerPost ====>', JSON.stringify(objekatZaServerPost));
+
+    // });
+
+
 }
 
 
@@ -110,11 +132,14 @@ function addNewField() {
     let inputNamePrefix = "PericaMali";
     let newFieldName = inputNamePrefix + koklikopostojiinputa;
 
+    let objekatZaServerPost={};
 
-    for(let i = 0; i< listainputaforme.length; i++){
-        console.log(listainputaforme.length);
+    for(let i = 0; i< koklikopostojiinputa; i++){
+        objekatZaServerPost[listainputaforme[i].name] = listainputaforme[i].value;
+
+        
     }
-
+    console.log('objekatZaServerPost', objekatZaServerPost);
 
     let newLabel = $(" <label for='invoice-name' class='label'  id = 'newLabel'> " + newFieldName + "</label>")
     $('#date').after(newLabel);
