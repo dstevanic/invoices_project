@@ -25,9 +25,6 @@ $(document).ready(function () {
     }
 
 
-
-
-
     invIdForEdit = $.urlParam('invId');
     console.log('invIdForEdit', invIdForEdit);
 
@@ -51,6 +48,7 @@ $(document).ready(function () {
     // invName = $("name", form).val();
     //  invVal = $("val", form).val();
     //  invDate = $("date", form).val();
+   
 })
 
 function postInvoice() {
@@ -107,9 +105,20 @@ function putInvoice() {
 
 function addNewField() {
 
-    let newLabel = $(" <label for='invoice-name' class='label'  id = 'newLabel'>New label</label>")
+    let listainputaforme = $("input", form);
+    let koklikopostojiinputa = listainputaforme.length;
+    let inputNamePrefix = "PericaMali";
+    let newFieldName = inputNamePrefix + koklikopostojiinputa;
+
+
+    for(let i = 0; i< listainputaforme.length; i++){
+        console.log(listainputaforme.length);
+    }
+
+
+    let newLabel = $(" <label for='invoice-name' class='label'  id = 'newLabel'> " + newFieldName + "</label>")
     $('#date').after(newLabel);
-    let newInput = $("<input name='new_field' type='text' class= 'invoices-input'>");
+    let newInput = $("<input name= '" + newFieldName + "' type='text' class= 'invoices-input'>");
     $('#newLabel').after(newInput);
 }
 

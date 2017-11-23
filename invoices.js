@@ -1,5 +1,5 @@
 let invTable,
-    baseUrl = "https://c7xj8b7r70.execute-api.us-east-1.amazonaws.com/latest/invoices";
+    baseUrl = "https://c7xj8b7r70.execute-api.us-east-1.amazonaws.com/latest/invoices/";
 
 $(document).ready(function () {
     invTable = $("#invoices-table");
@@ -54,7 +54,7 @@ function getInvoices(callback) {
 
 function deleteInvoice(invoiceForDelete) {
     //TODO: funkcija brisanje podataka sa servera(za izabrani zapis)
-    ajaxRequest('DELETE', baseUrl + '/' + invoiceForDelete, undefined, function () {
+    ajaxRequest('DELETE', baseUrl + invoiceForDelete, undefined, function () {
         getInvoices(renderTable);
 
     });

@@ -13,15 +13,10 @@
 
 <body>
     <div class="container">
+        <form id="invoices-form">
 
-
-
-
-
-
-        <form id="invoices-form" >
-
-            <button type="button" class="btn addInput" onclick="addNewField()">Add new field</button><br/>
+            <button type="button" class="btn addInput" onclick="addNewField()">Add new field</button>
+            <br/>
             <h3>Add new invoice</h3>
             <input name="invoicesid" type="hidden" class="invoices-input" id="invId" />
             <label for="invoice-name" class="label">Invoice name</label>
@@ -34,15 +29,13 @@
             <br/>
             <label for="date" class="label">Date</label>
             <br/>
-            <input name="date" type="text"  class="invoices-input" id="date" />
+            <input name="date" type="date" class="invoices-input" id="date" />
             <br/>
 
             <hr>
             <button type="button" id="btnAdd" class="btn" onclick="postInvoice()"> Add</button>
             <button type="button" id="btnSave" class="btn" onclick="putInvoice()"> Save</button>
         </form>
-
-
 
     </div>
 
