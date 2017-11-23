@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="invoices-form.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
     <title>Invoices </title>
 </head>
 
@@ -13,36 +15,38 @@
     <div class="container">
 
 
-        <button type="button" class="btnNewInput" onclick="linkToForm()">Add new field</button>
 
 
-        <section class="loginForm">
 
-            <form id="form-login">
-                <h3>Add new invoice</h3>
-                <label for="invoice-name" class="label">Invoice name</label>
-                <br/>
-                <input type="text" name="invoice-name" id="invoiceName" />
-                <br/>
-                <label for="editor" class="label">Value</label>
-                <br/>
-                <input type="text" name="value" id="val" />
-                <br/>
-                <label for="date" class="label">Date</label>
-                <br/>
-                <input type="date" name="date" id="date" />
-                <br/>
 
-            
-                <button type="button" onclick="postInvoice()">Save</button>
-                
-            </form>
-        </section>
+        <form id="invoices-form" >
+
+            <button type="button" class="btn addInput" onclick="addNewField()">Add new field</button><br/>
+            <h3>Add new invoice</h3>
+            <input name="invoicesid" type="hidden" class="invoices-input" id="invId" />
+            <label for="invoice-name" class="label">Invoice name</label>
+            <br/>
+            <input name="name" type="text" class="invoices-input" id="name" />
+            <br/>
+            <label for="value" class="label">Value</label>
+            <br/>
+            <input name="val" type="text" class="invoices-input" id="val" />
+            <br/>
+            <label for="date" class="label">Date</label>
+            <br/>
+            <input name="date" type="text"  class="invoices-input" id="date" />
+            <br/>
+
+            <hr>
+            <button type="button" id="btnAdd" class="btn" onclick="postInvoice()"> Add</button>
+            <button type="button" id="btnSave" class="btn" onclick="putInvoice()"> Save</button>
+        </form>
+
 
 
     </div>
 
-    <script type="text/javascript" src="invoices.js"></script>
+    <script type="text/javascript" src="invoices-form.js"></script>
 </body>
 
 </html>

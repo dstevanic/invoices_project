@@ -1,28 +1,28 @@
-body{
+body {
     background-color: #d3d4dd;
     margin: 15px;
-    color:#e0dde0;
+    color: #e0dde0;
     /* font-family:"Whitney SSm A", "Whitney SSm B", "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif; */
-    font-family: Montserrat, sans-serif; 
-   
+    font-family: Montserrat, sans-serif;
 }
-.container{ 
-    margin:auto;
+
+.container {
+    margin: auto;
     height: auto;
-    width: 800px; 
+    width: 800px;
 }
 
-
-section{
-    background-color: #6471f8;
+section {
+    background-color: #323358;
     padding: 30px;
     border-radius: 15px;
-    
 }
-section p{
+
+section p {
     text-align: justify;
 }
-section ol li{
+
+section ol li {
     padding-top: 10px;
 }
 
@@ -31,40 +31,50 @@ table {
     border-spacing: 0;
 }
 
-section table tr th, tr td{
+section table tr th,
+tr td {
     padding: 10px;
-    width:200px;
+    width: 200px;
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: left;
 }
 
-
-section table.table-hover tr:hover td{
-    background-color: #18adf8;
+section table.table-hover tr:hover td {
+    background-color: #383d6b;
     cursor: pointer;
 }
-section table tr td {
-    border-top: 1px solid #5261e6; }
-  table tr:hover td {
-    background-color: #0ebcfd;
-    cursor: pointer; }
-  table tr:hover td:first-of-type {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px; }
-  table tr:hover td:last-of-type {
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px; }
- 
 
-    .btn{
-        border-radius: 20px;
-        height: 40px;
-        width: 200px; 
-        border: none;
-        background-color: #0ebcfd;
-        outline: none;
-        color:white;
-        margin: 10px 0px;
-       
-    }
+section table tr td {
+    border-top: 1px solid #c3c3c3;
+}
+
+table tr:hover td {
+    background-color: #383d6b;
+    cursor: pointer;
+}
+
+table tr:hover td:first-of-type {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+table tr:hover td:last-of-type {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.btn {
+    border-radius: 15px;
+    height: 30px;
+    width: 100px;
+    border: none;
+    background-color: #adb5c4;
+    outline: none;
+    color: #383d6b;
+    margin: 10px 0px;
+}
+
+.btn.addNew {
+    width: 150px;
+}
